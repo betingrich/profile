@@ -1,11 +1,11 @@
 document.addEventListener('scroll', function(event) {
-    const profiles = document.querySelectorAll('.profile');
-    profiles.forEach(profile => {
-        const rect = profile.getBoundingClientRect();
+    const slides = document.querySelectorAll('.slide');
+    slides.forEach(slide => {
+        const rect = slide.getBoundingClientRect();
         if (rect.left >= 0 && rect.right <= window.innerWidth) {
-            profile.style.opacity = '1';
+            slide.style.transform = 'scale(1.1)';
         } else {
-            profile.style.opacity = '0.5';
+            slide.style.transform = 'scale(0.9)';
         }
     });
 });
